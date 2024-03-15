@@ -12,13 +12,17 @@ public class Main {
                 200.00, "Red", 4
         );
 
-        violin.makeNoise();
+        System.out.println(piano.getMaterial());
+        System.out.println(violin.getMaterial());
+        violin.changeMaterial("Metal");
+        Instrument.material = "Rubber";
+        System.out.println(piano.getMaterial());
+        System.out.println(violin.getMaterial());
 
-        printInstrument(piano);
-        printInstrument(violin);
 
     }
 
+    //Polymorphism
     public static void printInstrument(Instrument instrument){
         System.out.println(instrument);
     }

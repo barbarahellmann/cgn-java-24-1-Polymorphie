@@ -5,6 +5,7 @@ import java.util.Objects;
 //Elternklasse -> Superklasse genannt
 public class Instrument {
 
+    public static String material = "Wood";
     private double price;
     private String color;
 
@@ -17,6 +18,13 @@ public class Instrument {
         System.out.println("Instrument sounds");
     }
 
+    public void changeMaterial(String newMaterial){
+        material = newMaterial;
+    }
+
+    public String getMaterial(){
+        return material;
+    }
 
     public double getPrice() {
         return price;
