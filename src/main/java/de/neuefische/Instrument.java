@@ -3,7 +3,7 @@ package de.neuefische;
 import java.util.Objects;
 
 //Elternklasse -> Superklasse genannt
-public class Instrument {
+public class Instrument implements CanMakeNoise{
 
     public static String material = "Wood";
     private double price;
@@ -14,9 +14,6 @@ public class Instrument {
         this.color = color;
     }
 
-    public void makeNoise(){
-        System.out.println("Instrument sounds");
-    }
 
     public void changeMaterial(String newMaterial){
         material = newMaterial;
@@ -61,5 +58,15 @@ public class Instrument {
                 "price=" + price +
                 ", color='" + color + '\'' +
                 '}';
+    }
+
+    @Override
+    public void makeNoise() {
+        System.out.println("Instument Sounds");
+    }
+
+    @Override
+    public void getLouder() {
+        System.out.println("The Instrument plays louder!!");
     }
 }
